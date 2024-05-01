@@ -1,0 +1,559 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  scrollbar-width: 1px;
+  scrollbar-color: #ffffff #fff;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+    border-style: none;
+    background-color: white;
+}
+
+@font-face {
+    font-family: 'SF-Medium';
+    src: url(assets/SF-Pro-Display-Medium.otf);
+}
+
+@font-face {
+    font-family: 'SF-Regular';
+    src: url(assets/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+    font-family: 'SF-SemiBold';
+    src: url(assets/SF-Pro-Display-Semibold.otf);
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    background-color: #fff;
+    padding-top: 0.5rem;
+}
+
+.title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 32px;
+    font-family: 'SF-Medium';
+}
+
+.logo {
+    margin-right: 0.3rem;
+}
+
+.search-container {
+    margin: 0 2rem 0 8rem;
+    height: 75%;
+    width: 50%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 7px 0px #0000001a;
+}
+
+.search-box {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    width: 60%;
+    margin-right: 9rem;
+}
+
+.search-hot-key {
+    width: 15%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+    font-family: 'SF-Regular';
+}
+
+.search-submit-button {
+    height: 90%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: white;
+}
+
+.search-submit-icon {
+    height: 1.3rem;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    
+}
+
+.header-button {
+    margin-right: 0.7rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.header-button-icon {
+    margin: 0 0.1rem;
+    width: 1.5rem;
+}
+
+.header-text {
+    width: 8rem;
+    font-size: 17px;
+    font-family: 'SF-Medium';
+}
+
+.message-notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 16px;
+    padding: 0.4rem;
+    border-radius: 10px;
+    margin-left: -0.7rem;
+    margin-top: -1.1rem;
+    background-color: red;
+}
+
+.message-notification-text {
+    font-size: 12px;
+    font-family: 'SF-Regular';
+}
+
+.profile-icon {
+    height: 20px;
+}
+
+/* ----------- Side bar ----------- */
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 4rem 0rem 0rem 1.5rem;
+}
+
+.page_image {
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+}
+
+.messages-box {
+    padding-top: 1rem;
+    z-index: 1;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.message-name {
+    font-family: 'SF-Medium';
+    font-size: 16px;
+}
+
+.message-username {
+    margin-top: -0.2rem;
+    font-family: 'SF-Regular';
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.message-text {
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    font-family: 'SF-Regular';
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 1px;
+}
+
+.message-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-date {
+    font-family: 'SF-Medium';
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.message-product {
+    font-family: 'SF-Regular';
+    font-size: 16px;
+    text-decoration: underline;
+    color: blue;
+    letter-spacing: 1px;
+}
+
+.message-button {
+    height: 5.7vh;
+    width: 70%;
+    border-radius: 25px;
+    background-color: blue;
+    color: white;
+    font-family: 'SF-Regular';
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 5rem;
+}
+
+.message-gradient-overlay {
+    display: flex;
+    justify-content: center;
+    background: rgb(2,0,36);
+    margin-left: -0.2rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(255, 255, 255) 40%);
+    height: 30vh;
+    position: fixed;
+    width: 20.5vw;
+    z-index: 2;
+    top: 24rem;
+}
+
+.power-buttons {
+    z-index: 3;
+    position: fixed;
+    top: 77vh;
+    width: 20vw;
+    padding: 0 5rem 0 1rem;
+}
+
+.power-button {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.6rem;
+    border-radius: 10px;
+}
+
+.revenue-button {
+    display: flex;
+    flex-direction: column;
+    font-family: 'SF-Regular';
+    letter-spacing: 0.8px;
+    background-color: rgb(16, 70, 0);
+}
+
+.support-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    padding: 0.9rem;
+}
+
+.sold-button-text {
+    width: 60%;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgb(200, 243, 107);
+}
+
+.sold-number {
+    display: flex;
+    align-items: baseline;
+}
+
+.sold-button-currency {
+    font-family: 'SF-Regular';
+    font-size: 16px;
+    margin-left: 0.4rem;
+    color: #fff;
+}
+
+.sold-button-number {
+    font-family: 'SF-SemiBold';
+    font-size: 25px;
+    color: #fff;
+}
+
+.support-button-icon {
+    width: 1.7rem;
+}
+
+.support-button-text {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    font-family: 'SF-Regular';
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* ------------ Main section ------------- */
+.main {
+    padding-top: 5rem;
+    margin-left: 23vw;
+    z-index: 5;
+    font-family: 'SF-SemiBold';
+    font-size: 28px;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap; 
+    overflow: auto;
+    height: 12vh;
+}
+
+.category-box {
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 auto;
+    height: 90%;
+    width: 12vw;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    line-height: 17px;
+}
+
+.category-box:first-child {
+    margin-left: 1rem;
+}
+
+.category-box:last-child {
+    margin-right: 1rem;
+}
+
+.category-text {
+    font-family: 'SF-Medium';
+    font-size: 14px;
+}
+
+.category-image {
+    height: 110%;
+    margin-left: 0.4rem;
+}
+
+
+
+.top-products {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: auto;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.top-product-box {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    background-image: url(assets/image\ 13.png);
+    background-size: cover;
+    height: 15rem;
+    width: 13vw;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.top-product-text {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.3) 58%, rgba(0,0,0,0.5) 78%);
+    height: 100%;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 15px;
+}
+
+.top-product-image-darkener {
+    z-index: 0;
+}
+
+.top-product-text-top {
+    font-family: 'SF-SemiBold';
+    font-size: 11px;
+    color: red;
+}
+
+.top-product-text-name {
+    margin-top: -0.1rem;
+    font-family: 'SF-Regular';
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    width: 105%;
+    color: white;
+}
+
+.top-product-text-date {
+    margin-top: -0.1rem;
+    font-family: 'SF-Regular';
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+}
+
+.top-product-text-price {
+    margin-top: 8.2rem;
+    color: #fff;
+    font-family: 'SF-Regular';
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.top-product-text-currency {
+    display: inline-block;
+    font-size: 15px;
+}
+
+
+
+
+.recommendation-box {
+    margin-top: 2rem;
+}
+
+
+.products-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.7rem;
+}
+
+.product-box {
+    height: 49vh;
+    width: 18vw;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 0.7rem 0.6rem 0 1.1rem;
+}
+
+.product-type {
+    font-family: 'SF-Medium';
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+.product-name {
+    font-family: 'SF-Medium';
+    font-size: 25px;
+    margin-top: -0.25rem;
+    margin-bottom: 0.08rem;
+}
+
+.product-address-date {
+    font-family: 'SF-Regular';
+    font-size: 11px;
+    margin-top: -0.1rem;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.5px;
+}
+
+.product-image {
+    margin-top: 0.6rem;
+    margin-left: -0.25rem;
+    border-radius: 15px;
+    width: 23rem;
+}
+
+.product-footer {
+    margin-top: 0.55rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-price {
+    font-family: 'SF-Medium';
+    font-size: 17px;
+}
+
+.product-view-button {
+    border-radius: 15px;
+    width: 3.8rem;
+    background-color: blue;
+    color: #fff;
+    font-family: 'SF-Regular';
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}

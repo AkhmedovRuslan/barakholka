@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barakholka</title>
+    <link rel="stylesheet" type="text/css" href="search.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="title">
+            <img class="logo" src="assets/logo_lines.png" alt="Logo" />
+            Barakholka
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <p class="search-input">.</p>
+                <div class="search-hot-key">
+                    <p>Shift + F</p>
+                </div>
+                <button class="search-submit-button" type="submit">
+                    <img class="search-submit-icon" src="assets/search_icon.png" alt="Search" />
+                </button>
+            </div>
+        </div>
+        <div class="header-buttons">
+            <div class="header-button">
+                <img class="header-button-icon" src="assets/like_icon.png" alt="Liked" />
+            </div>
+            <div class="header-button">
+                <img class="header-button-icon" src="assets/comment_icon.png" alt="Messages" />
+                <div class="message-notification"><p class="message-notification-text">1</p></div>
+            </div>
+            <div class="header-button">
+                <img class="header-button-icon" src="assets/product_icon.png" alt="Box" />
+                <div class="header-text">My products</div>
+            </div>
+            <div class="header-button">
+                <img class="header-button-icon" src="assets/settings-icon.png" alt="Settings" />
+            </div>
+            <div class="header-button">
+                <img class="header-button-icon" src="assets/profile_icon.png" alt="Profile" />
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <div class="page_image">
+                <img src="assets/page_image_1.png" alt="page_image" />
+            </div>
+            <form class="sorting-container">
+                    <input checked id="recently_added_sorting_button" class="sorting-radio-button" type="radio" value="recently_added" name="sorting"/>
+                    <div class="radio-button-label-container">
+                        <div class="radio-button-indicator"></div>
+                        <label class="radio-button-label" for="recently_added_sorting_button">
+                            <p>Недавно добавленные</p>
+                        </label>
+                    </div>
+                    <input id="high_rating_author_sorting_button" class="sorting-radio-button" type="radio" value="author_with_high_rating" name="sorting"/>
+                    <div class="radio-button-label-container">
+                        <div class="radio-button-indicator"></div>
+                        <label class="radio-button-label" for="high_rating_author_sorting_button">
+                            <p>Автор с лучшим рейтингом</p>
+                        </label>
+                    </div>
+                    <input id="expensive_sorting_button" class="sorting-radio-button" type="radio" value="expensive" name="sorting"/>
+                    <div class="radio-button-label-container">
+                        <div class="radio-button-indicator"></div>
+                        <label class="radio-button-label" for="expensive_sorting_button">
+                            <p>Сначала дорогие</p>
+                        </label>
+                    </div>
+                    <input id="cheap_sorting_button" class="sorting-radio-button" type="radio" value="cheap" name="sorting"/>
+                    <div class="radio-button-label-container">
+                        <div class="radio-button-indicator"></div>
+                        <label class="radio-button-label" for="cheap_sorting_button">
+                            <p>Сначала дешевые</p>
+                        </label>
+                    </div>
+            </form>
+            <form class="price-sorting">
+                Цена (сум)
+                <div class="price-sorting-container">
+                    <input class="price-sorting-input" placeholder="0"/>
+                    -
+                    <input class="price-sorting-input" placeholder="1 000 000"/>
+                </div>
+            </form>
+            <form class="sorting-container category-sorting-container">
+                Категории
+                <input checked id="books_sorting_button" class="sorting-radio-button" type="radio" value="books" name="categories"/>
+                <div class="radio-button-label-container">
+                    <div class="radio-button-indicator"></div>
+                    <label class="radio-button-label category-label" for="books_sorting_button">
+                        <p>Книги</p>
+                    </label>
+                </div>
+                <input id="tech_sorting_button" class="sorting-radio-button" type="radio" value="tech" name="categories"/>
+                <div class="radio-button-label-container">
+                    <div class="radio-button-indicator"></div>
+                    <label class="radio-button-label category-label" for="tech_sorting_button">
+                        <p>Электроника</p>
+                    </label>
+                </div>
+                <input id="poster_sorting_button" class="sorting-radio-button" type="radio" value="poster" name="categories"/>
+                <div class="radio-button-label-container">
+                    <div class="radio-button-indicator"></div>
+                    <label class="radio-button-label category-label" for="poster_sorting_button">
+                        <p>Постеры</p>
+                    </label>
+                </div>
+            </form>
+            <div class="power-buttons">
+                <div class="power-button support-button">
+                    <img class="support-button-icon" src="assets/support_icon.png" alt="support" />
+                    <p class="support-button-text">Need help?</p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="recommendation-box">
+                <div class="products-section">
+                    <div class="product-box">
+                        <p class="product-type">NEW</p>
+                        <p class="product-name">Google earbuds</p>
+                        <p class="product-address-date">г.Ташкент, Мирзо-Улугбекский район</p>
+                        <p class="product-address-date">Сегодня, 12:05</p>
+                        <img class="product-image" src="assets/product_image.png" alt="top_product" />
+                        <div class="product-footer">
+                            <p class="product-price">253 000 <span class="product-currency">сум</span></p>
+                            <button class="product-view-button">VIEW</button>
+                        </div>
+                    </div>
+                    <div class="product-box">
+                        <p class="product-type">NEW</p>
+                        <p class="product-name">Google earbuds</p>
+                        <p class="product-address-date">г.Ташкент, Мирзо-Улугбекский район</p>
+                        <p class="product-address-date">Сегодня, 12:05</p>
+                        <img class="product-image" src="assets/product_image.png" alt="top_product" />
+                        <div class="product-footer">
+                            <p class="product-price">253 000 <span class="product-currency">сум</span></p>
+                            <button class="product-view-button">VIEW</button>
+                        </div>
+                    </div>
+                    <div class="product-box">
+                        <p class="product-type">NEW</p>
+                        <p class="product-name">Google earbuds</p>
+                        <p class="product-address-date">г.Ташкент, Мирзо-Улугбекский район</p>
+                        <p class="product-address-date">Сегодня, 12:05</p>
+                        <img class="product-image" src="assets/product_image.png" alt="top_product" />
+                        <div class="product-footer">
+                            <p class="product-price">253 000 <span class="product-currency">сум</span></p>
+                            <button class="product-view-button">VIEW</button>
+                        </div>
+                    </div>
+                    <div class="product-box">
+                        <p class="product-type">NEW</p>
+                        <p class="product-name">Google earbuds</p>
+                        <p class="product-address-date">г.Ташкент, Мирзо-Улугбекский район</p>
+                        <p class="product-address-date">Сегодня, 12:05</p>
+                        <img class="product-image" src="assets/product_image.png" alt="top_product" />
+                        <div class="product-footer">
+                            <p class="product-price">253 000 <span class="product-currency">сум</span></p>
+                            <button class="product-view-button">VIEW</button>
+                        </div>
+                    </div>
+                    <div class="product-box">
+                        <p class="product-type">NEW</p>
+                        <p class="product-name">Google earbuds</p>
+                        <p class="product-address-date">г.Ташкент, Мирзо-Улугбекский район</p>
+                        <p class="product-address-date">Сегодня, 12:05</p>
+                        <img class="product-image" src="assets/product_image.png" alt="top_product" />
+                        <div class="product-footer">
+                            <p class="product-price">253 000 <span class="product-currency">сум</span></p>
+                            <button class="product-view-button">VIEW</button>
+                        </div>
+                    </div>
+                    <div class="product-box">
+                        <p class="product-type">NEW</p>
+                        <p class="product-name">Google earbuds</p>
+                        <p class="product-address-date">г.Ташкент, Мирзо-Улугбекский район</p>
+                        <p class="product-address-date">Сегодня, 12:05</p>
+                        <img class="product-image" src="assets/product_image.png" alt="top_product" />
+                        <div class="product-footer">
+                            <p class="product-price">253 000 <span class="product-currency">сум</span></p>
+                            <button class="product-view-button">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
